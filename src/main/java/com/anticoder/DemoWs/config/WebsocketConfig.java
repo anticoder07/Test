@@ -25,6 +25,7 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
   public void configureMessageBroker(MessageBrokerRegistry registry) {
     registry.enableSimpleBroker("/topic");
     registry.setApplicationDestinationPrefixes("/app"); // set tiền tố cho destination /app/{userId}
+    registry.setUserDestinationPrefix("/user");
 
     log.info("Message broker configured");}
 }
